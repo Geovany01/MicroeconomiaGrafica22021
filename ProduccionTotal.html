@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+
+</head>
+<body>
+    <canvas id="MiGrafica" width="400" height="600"></canvas>
+</body>
+<script>
+    let miCanvas = document.getElementById("MiGrafica").getContext("2d");
+
+    var chart = new Chart(miCanvas,{
+    type:"line",
+    data:{
+       labels:["0","1", "2", "3", "4"],
+       datasets:[
+           {
+               label:"Produccion Medio",
+               backgroundColor: "rgba(54, 162, 235, 0.2)",
+               borderColor:"rgba(54, 162, 235, 1)",
+               data:[0,12,20,26,30]
+           }
+       ] 
+    }
+})
+</script>
+</html>
